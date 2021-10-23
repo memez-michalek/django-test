@@ -1,9 +1,8 @@
 from django.contrib import admin
-from analytics.models import Event
+from analytics.models import Event, User
 
-# Register your models here.
 class EventAdmin(admin.ModelAdmin):
     search_fields = ['name']
 
-
 admin.site.register(Event, EventAdmin)
+admin.site.register(User)
