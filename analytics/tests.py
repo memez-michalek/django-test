@@ -9,7 +9,7 @@ class EventTests(APITestCase):
     def url(self):
         return reverse('events')
     def create_user_token(self):
-        user = User.objects.create(username='admin', password='admin')
+        user = User.objects.create(username='user', password='user')
         user.save()
         return Token.objects.get(user=user).key
     

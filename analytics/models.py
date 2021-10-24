@@ -3,10 +3,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.conf import settings
-#from rest_framework.authtoken.models import Token
-from django.utils.translation import gettext_lazy as _
-import os
-import binascii
+from rest_framework.authtoken.models import Token
 
 class Event(models.Model):
     name = models.CharField(max_length=255, blank=False)

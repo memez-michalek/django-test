@@ -22,7 +22,6 @@ class EventCreate(APIView):
         elif additional_data is None:
             additional_data = ''
 
-
         user_from_token = Token.objects.get(key=api_key).user
         event = Event.objects.create(name=event_name, 
                                     additional_data=additional_data, 
